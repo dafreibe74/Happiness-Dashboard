@@ -1,6 +1,8 @@
 # Happiness-Dashboard
 This is our group project for advanced data wrangling and dashboard creation
 
+Proposal: We would like to take the World Happiness Data AND the Heavy Metal Band data sets (both for 2021), combine them into one database and create interactive visuals to see the relationship between the Happiness rank by country AND the number of Heavy Metal bands by their population. 
+
 Team:
 * Irina Tenis
 * Kelsey Richards
