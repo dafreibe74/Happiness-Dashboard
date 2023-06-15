@@ -25,4 +25,4 @@ Team:
 13. Slideware and preso structure - Dave
 
 ![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot2_for_p2_720.png?raw=true)
-![image](https://nuvirtdatapt0-lgq6188.slack.com/files/U04RJPADUJW/F05DAP79Q3S/screenshot2_for_p2.png)
+![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot_for_p2_360.png?raw=true)
