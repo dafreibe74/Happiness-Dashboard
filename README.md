@@ -2,12 +2,12 @@
 This is our group project for advanced data wrangling and dashboard creation
 
 Team:
-*Irina Tenis
-*Kelsey Richards
-*Peter Ferguson
-*Nate Martinez
-*Jessica Ferraro
-*Dave Freiberg
+* Irina Tenis
+* Kelsey Richards
+* Peter Ferguson
+* Nate Martinez
+* Jessica Ferraro
+* Dave Freiberg
 
 ## Order of operations: 
 1. Scrape metal bands – Nate
