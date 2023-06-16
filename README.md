@@ -12,7 +12,7 @@ https://www.geographyrealm.com/geography-of-heavy-metal-bands/#:~:text=USA%3A%20
 
 ## World Happiness Dataset - Kaggle
 https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2021.csv
-![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot2_for_p2_720.png?raw=true)
+![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/Screenshot%202023-06-15%20at%208.14.47%20PM.png?raw=true)
 
 ## Team:
 * Irina Tenis
