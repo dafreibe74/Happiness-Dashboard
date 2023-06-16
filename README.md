@@ -37,5 +37,6 @@ https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2021.
 12. Publish to GitPages - Dave
 13. Slideware and preso structure - Dave
 
+## Examples of our visualization inspiration below (additional js library HighChart)
 ![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot2_for_p2_720.png?raw=true)
 ![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot_for_p2_360.png?raw=true)
