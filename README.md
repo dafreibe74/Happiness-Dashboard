@@ -8,10 +8,12 @@
 
 ## Heavy Metal Dataset - Kaggle
 https://www.geographyrealm.com/geography-of-heavy-metal-bands/#:~:text=USA%3A%20Metallica%2C%20Anthrax%2C%20Slayer,%2C%20Venom%2C%20Mot%C3%B6rhead%2C%20Bolt%20Thrower
-![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot2_for_p2_720.png?raw=true)
+![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/Screenshot%202023-06-15%20at%208.16.13%20PM.png?raw=true)
+
 ## World Happiness Dataset - Kaggle
 https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2021.csv
 ![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot2_for_p2_720.png?raw=true)
+
 ## Team:
 * Irina Tenis
 * Kelsey Richards
