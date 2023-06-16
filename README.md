@@ -6,7 +6,7 @@
 * Interactive line charts showing multiple data points (e.g. Happiness Score, GDP, Metal Bands per country, etc)
 * Slicers that will allow a user to change the dashboard by choosing a country from a dropdown menu
 
-## Heavy Metal Dataset - Kaggle
+## Heavy Metal Dataset - GeographyRealm
 https://www.geographyrealm.com/geography-of-heavy-metal-bands/#:~:text=USA%3A%20Metallica%2C%20Anthrax%2C%20Slayer,%2C%20Venom%2C%20Mot%C3%B6rhead%2C%20Bolt%20Thrower
 ![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/Screenshot%202023-06-15%20at%208.16.13%20PM.png?raw=true)
 
