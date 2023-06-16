@@ -1,17 +1,17 @@
 # Happiness-Dashboard
 
 ## Rationale
-### In our first project we found that Scandanavian + Finland countries were consistently ranked higher year-over-year in Happiness Score. We also noticed that these countries had higher numbers of heavy metal bands. Our proposal is scrape the World Happiness Data AND the Heavy Metal Band data (both for 2021), combine them into one database and create interactive visualizations showing the fields and data from both Happiness AND the number of Heavy Metal bands by their population. 
+### In this project we’ll take a take on creating a fun and interactive dashboard to visualize the data for the year of 2021 in The World Happiness Report -  a well-known publication of the Sustainable Development Solutions Network, powered by the Gallup World Poll data. Besides visualizing the data from the report, we will look into and demonstrate the relationship between the happiness score and the number of heavy metal bands in the country.
 * Interactive maps to showcase data by country
 * Interactive line charts showing multiple data points (e.g. Happiness Score, GDP, Metal Bands per country, etc)
 * Slicers that will allow a user to change the dashboard by choosing a country from a dropdown menu
 
 ## Heavy Metal Dataset - Kaggle
 https://www.geographyrealm.com/geography-of-heavy-metal-bands/#:~:text=USA%3A%20Metallica%2C%20Anthrax%2C%20Slayer,%2C%20Venom%2C%20Mot%C3%B6rhead%2C%20Bolt%20Thrower
-
+![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot2_for_p2_720.png?raw=true)
 ## World Happiness Dataset - Kaggle
 https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2021.csv
-
+![image](https://github.com/dafreibe74/Happiness-Dashboard/blob/main/screenshot2_for_p2_720.png?raw=true)
 ## Team:
 * Irina Tenis
 * Kelsey Richards
