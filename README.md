@@ -22,7 +22,7 @@ https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2021.
 * Jessica Ferraro
 * Dave Freiberg
 
-## Order of operations: 
+## Order of Operations: 
 1. Scrape metal bands – Nate
 2. Data wrangling in Pandas – Peter/Irina
 3. Database schema [’21 Happiness data, ’21 metal data] – Peter
