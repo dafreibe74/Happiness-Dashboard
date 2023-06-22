@@ -4,7 +4,7 @@
         'https://code.highcharts.com/mapdata/custom/world.topo.json'
     ).then(response => response.json());
 
-    Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-population.json', function (data) {
+    Highcharts.getJSON('combined_json.json', function (data) {
 
         Highcharts.mapChart('container', {
             chart: {
@@ -52,13 +52,13 @@
                 enableMouseTracking: false
             }, {
                 type: 'mapbubble',
-                name: 'Population 2016',
-                joinBy: ['iso-a3', 'code3'],
+                name: 'Metal Bands 2021',
+                joinBy: ['iso-a3', ''],
                 data: data,
                 minSize: 4,
                 maxSize: '12%',
                 tooltip: {
-                    pointFormat: '{point.properties.hc-a2}: {point.z} thousands'
+                    pointFormat: '{point.properties.hc-a2}: {point.Metal_bands_per_100000_people} thousands'
                 }
             }]
         });
