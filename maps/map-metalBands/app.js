@@ -4,7 +4,7 @@
         'https://code.highcharts.com/mapdata/custom/world.topo.json'
     ).then(response => response.json());
 
-    Highcharts.getJSON('combined_json.json', function (data) {
+    Highcharts.getJSON('js_complete.json', function (data) {
 
         Highcharts.mapChart('container', {
             chart: {
@@ -53,7 +53,7 @@
             }, {
                 type: 'mapbubble',
                 name: 'Metal Bands 2021',
-                joinBy: ['iso-a3', 'root.index.Country'],
+                joinBy: ['iso-a3', 'root.iso-3'],
                 data: data,
                 minSize: 4,
                 maxSize: '12%',
