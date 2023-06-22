@@ -11,7 +11,7 @@ from flask import Flask, jsonify, render_template
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("sqlite:////Users/JA/Desktop/Class_Projects_Data_Science_BC/EDDIES_3/Happiness-Dashboard/data/Happiness.sqlite")
+engine = create_engine("sqlite:///data/Happiness.sqlite")
 
 # reflect an existing database into a new model
 Base = automap_base()
@@ -30,9 +30,9 @@ session = Session(engine)
 #################################################
 app = Flask(__name__)
 
-# @app.route("/")
-# def welcome():
-#     return render_template("index.html")
+@app.route("/")
+def welcome():
+    return render_template("index.html")
 
 # @app.route("/api/v1.0/happiness/scores")
 # def scores():
