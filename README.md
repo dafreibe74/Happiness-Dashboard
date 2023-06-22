@@ -18,7 +18,7 @@ https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2021.
 * Irina Tenis
 * Kelsey Richards
 * Peter Ferguson
-* Nate Martinez
+* Nate Martinez 
 * Jessica Ferraro
 * Dave Freiberg
 
