@@ -53,7 +53,7 @@
             }, {
                 type: 'mapbubble',
                 name: 'Metal Bands 2021',
-                joinBy: ['iso-a3', 'root.iso-3'],
+                joinBy: ['iso-a3', 'root.iso-a3'],
                 data: data,
                 minSize: 4,
                 maxSize: '12%',
