@@ -80,10 +80,10 @@ def gdp():
 
 @app.route("/api/v1.0/happiness/data")
 def happinessData():
-    happiness_results = session.query(Happiness.Country, Happiness.Happiness, Happiness.GDP_per_capita, Happiness.Social_support, Happiness.Life_expectancy, Happiness.Freedom, Happiness.Generosity, Happiness.Corruption, Happiness.Dystopia).all()
+    happiness_results = session.query(Happiness.Country, Happiness.Happiness, Happiness.GDP_per_capita, Happiness.Social_support, Happiness.Life_expectancy, Happiness.Freedom, Happiness.Generosity, Happiness.Corruption, Happiness.Dystopia, Happiness.Contribution_GDP_per_capita, Happiness.Contribution_Social_support, Happiness.Contribution_Life_expectancy, Happiness.Contribution_Freedom, Happiness.Contribution_Generosity, Happiness.Contribution_Corruption, Happiness.Contribution_Dystopia, Bands.Metal_bands_per_100000_people, Bands.Bands, Bands.Population).all()
     
     happiness_data_list = []
-
+    
     for result in happiness_results:
         country = result[0]
         happiness_score = result[1]
@@ -94,7 +94,17 @@ def happinessData():
         generosity = result[6]
         corruption = result[7]
         dystopia = result[8]
-
+        contribution_gdp = result[9]
+        contribution_social_support = result[10]
+        contribution_life_expectancy = result[11]
+        contribution_freedom = result[12]
+        contribution_generosity = result[13]
+        contribution_corruption = result[14]
+        contribution_dystopia = result[15]
+        metal_bands_per_100000_people = result[16]
+        bands = result[17]
+        population = result[18]
+        
         happiness_data = [{
             "country": country,
             "happiness score": happiness_score,
@@ -104,9 +114,19 @@ def happinessData():
             "freedom": freedom,
             "generosity": generosity,
             "corruption": corruption,
-            "dystopia": dystopia
+            "dystopia": dystopia,
+            "contribution_gdp": contribution_gdp,
+            "contribution_social_support": contribution_social_support,
+            "contribution_life_expectancy": contribution_life_expectancy,
+            "contribution_freedom": contribution_freedom,
+            "contribution_generosity": contribution_generosity,
+            "contribution_corruption": contribution_corruption,
+            "contribution_dystopia": contribution_dystopia,
+            "metal_bands_per_100000_people": metal_bands_per_100000_people,
+            "bands": bands,
+            "population": population
             }]
-        
+
         happiness_data_list.append(happiness_data)
 
 
