@@ -30,60 +30,60 @@ session = Session(engine)
 #################################################
 app = Flask(__name__)
 
-@app.route("/")
-def welcome():
-    return render_template("index.html")
+# @app.route("/")
+# def welcome():
+#     return render_template("index.html")
 
-@app.route("/api/v1.0/happiness/scores")
-def scores():
+# @app.route("/api/v1.0/happiness/scores")
+# def scores():
     
-    """Return a list of all happiness scores by country"""
-    # Query all happiness data
-    scores_results = session.query(Happiness.Country, Happiness.Happiness).all()
+#     """Return a list of all happiness scores by country"""
+#     # Query all happiness data
+#     scores_results = session.query(Happiness.Country, Happiness.Happiness).all()
 
-    # Convert the query results from the happiness db to a dictionary
-    scores_dict = dict(scores_results)
+#     # Convert the query results from the happiness db to a dictionary
+#     scores_dict = dict(scores_results)
     
-    session.close()
+#     session.close()
     
-    return jsonify(scores_dict)
+#     return jsonify(scores_dict)
 
 
 
-@app.route("/api/v1.0/bands")
-def bands():
+# @app.route("/api/v1.0/bands")
+# def bands():
     
-    """Return a list of number of bands and bands per by country"""
-    # Query all happiness data
-    bands_results = session.query(Bands.Country, Bands.Bands).all()
+#     """Return a list of number of bands and bands per by country"""
+#     # Query all happiness data
+#     bands_results = session.query(Bands.Country, Bands.Bands).all()
 
-    # Convert the query results from the happiness db to a dictionary
-    bands_dict = dict(bands_results)
+#     # Convert the query results from the happiness db to a dictionary
+#     bands_dict = dict(bands_results)
     
-    session.close()
+#     session.close()
     
-    return jsonify(bands_dict)
+#     return jsonify(bands_dict)
 
-@app.route("/api/v1.0/gdp")
-def gdp():
+# @app.route("/api/v1.0/gdp")
+# def gdp():
     
-    """Return a list of gdp by country"""
-    # Query all happiness data
-    gdp_results = session.query(Happiness.Country, Happiness.GDP_per_capita).all()
+#     """Return a list of gdp by country"""
+#     # Query all happiness data
+#     gdp_results = session.query(Happiness.Country, Happiness.GDP_per_capita).all()
 
-    # Convert the query results from the happiness db to a dictionary
-    gdp_dict = dict(gdp_results)
+#     # Convert the query results from the happiness db to a dictionary
+#     gdp_dict = dict(gdp_results)
     
-    session.close()
+#     session.close()
     
-    return jsonify(gdp_dict)
+#     return jsonify(gdp_dict)
 
 @app.route("/api/v1.0/happiness/data")
 def happinessData():
     happiness_results = session.query(Happiness.Country, Happiness.Happiness, Happiness.GDP_per_capita, Happiness.Social_support, Happiness.Life_expectancy, Happiness.Freedom, Happiness.Generosity, Happiness.Corruption, Happiness.Dystopia, Happiness.Contribution_GDP_per_capita, Happiness.Contribution_Social_support, Happiness.Contribution_Life_expectancy, Happiness.Contribution_Freedom, Happiness.Contribution_Generosity, Happiness.Contribution_Corruption, Happiness.Contribution_Dystopia, Bands.Metal_bands_per_100000_people, Bands.Bands, Bands.Population).all()
     
     happiness_data_list = []
-    
+
     for result in happiness_results:
         country = result[0]
         happiness_score = result[1]
@@ -132,37 +132,37 @@ def happinessData():
 
     return jsonify(happiness_data_list)
 
-@app.route("/api/v1.0/happiness/contribution")
-def contributionData():
-    contribution_results = session.query(Happiness.Country, Happiness.Contribution_GDP_per_capita, Happiness.Contribution_Social_support, Happiness.Contribution_Life_expectancy, Happiness.Contribution_Freedom, Happiness.Contribution_Generosity, Happiness.Contribution_Corruption, Happiness.Contribution_Dystopia).all()
+# @app.route("/api/v1.0/happiness/contribution")
+# def contributionData():
+#     contribution_results = session.query(Happiness.Country, Happiness.Contribution_GDP_per_capita, Happiness.Contribution_Social_support, Happiness.Contribution_Life_expectancy, Happiness.Contribution_Freedom, Happiness.Contribution_Generosity, Happiness.Contribution_Corruption, Happiness.Contribution_Dystopia).all()
     
-    contribution_data_list = []
+#     contribution_data_list = []
 
-    for result in contribution_results:
-        country = result[0]
-        contribution_gdp = result[1]
-        contribution_social_support = result[2]
-        contribution_life_expectancy = result[3]
-        contribution_freedom = result[4]
-        contribution_generosity = result[5]
-        contribution_corruption = result[6]
-        contribution_dystopia = result[7]
+#     for result in contribution_results:
+#         country = result[0]
+#         contribution_gdp = result[1]
+#         contribution_social_support = result[2]
+#         contribution_life_expectancy = result[3]
+#         contribution_freedom = result[4]
+#         contribution_generosity = result[5]
+#         contribution_corruption = result[6]
+#         contribution_dystopia = result[7]
 
-        contribution_data = [{
-            "country": country,
-            "contribution_gdp": contribution_gdp,
-            "contribution_social_support": contribution_social_support,
-            "contribution_life_expectancy": contribution_life_expectancy,
-            "contribution_freedom": contribution_freedom,
-            "contribution_generosity": contribution_generosity,
-            "contribution_corruption": contribution_corruption,
-            "contribution_dystopia": contribution_dystopia
-            }]
+#         contribution_data = [{
+#             "country": country,
+#             "contribution_gdp": contribution_gdp,
+#             "contribution_social_support": contribution_social_support,
+#             "contribution_life_expectancy": contribution_life_expectancy,
+#             "contribution_freedom": contribution_freedom,
+#             "contribution_generosity": contribution_generosity,
+#             "contribution_corruption": contribution_corruption,
+#             "contribution_dystopia": contribution_dystopia
+#             }]
         
-        contribution_data_list.append(contribution_data)
+#         contribution_data_list.append(contribution_data)
 
 
-    return jsonify(contribution_data_list)
+#     return jsonify(contribution_data_list)
     
     
     # # Convert list of tuples into normal list
