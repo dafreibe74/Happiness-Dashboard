@@ -1,4 +1,4 @@
-d3.json('js_complete.json', function(err, rows){
+d3.json('complete_js.json', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
