@@ -4,15 +4,15 @@
         'https://code.highcharts.com/mapdata/custom/world.topo.json'
     ).then(response => response.json());
 
-    Highcharts.getJSON('js_complete.json', function (data) {
-
+    Highcharts.getJSON('highchart_js.json', function (data) {
+        console.log(data)
         Highcharts.mapChart('container', {
             chart: {
                 map: topology
             },
 
             title: {
-                text: 'World Metal Bands 2021 by country'
+                text: 'Number of Metal Bands 2021 by Country'
             },
 
             subtitle: {
@@ -53,12 +53,12 @@
             }, {
                 type: 'mapbubble',
                 name: 'Metal Bands 2021',
-                joinBy: ['iso-a3', 'root.iso-a3'],
+                joinBy: ['iso-a3', 'iso-a3'],
                 data: data,
                 minSize: 4,
                 maxSize: '12%',
                 tooltip: {
-                    pointFormat: '{point.properties.hc-a2}: {point.Metal_bands_per_100000_people}'
+                    pointFormat: '{point.properties.hc-a2}: {point.z}'
                 }
             }]
         });
