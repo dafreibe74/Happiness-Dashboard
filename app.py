@@ -105,7 +105,7 @@ def happinessData():
         bands = result[17]
         population = result[18]
         
-        happiness_data = [{
+        happiness_data = {
             "country": country,
             "happiness score": happiness_score,
             "gdp": gdp,
@@ -125,7 +125,7 @@ def happinessData():
             "metal_bands_per_100000_people": metal_bands_per_100000_people,
             "bands": bands,
             "population": population
-            }]
+            }
 
         happiness_data_list.append(happiness_data)
 
