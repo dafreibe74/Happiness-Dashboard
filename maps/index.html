@@ -13,12 +13,48 @@
       body {
         background-image: url("https://img.freepik.com/free-vector/gradient-abstract-wireframe-background_23-2149020364.jpg");
       }
+
+      /* CSS for container layout */
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .map-container {
+        width: 50%;
+        height: 400px;
+        padding: 10px;
+      }
+
+      .chart-container {
+        width: 100%;
+        height: 300px;
+        padding: 10px;
+      }
+
+      /* CSS for map styles */
+      .map {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ddd;
+      }
+
+      /* CSS for chart styles */
+      .chart {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ddd;
+      }
     </style>
+    <!-- highcharts: -->
     <script src="https://code.highcharts.com/maps/highmaps.js"></script>
     <script src="https://code.highcharts.com/maps/modules/data.js"></script>
     <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
     <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
+    <!-- Load plotly.js into the DOM -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   </head>
 
   <body>
@@ -26,30 +62,35 @@
       <div class="row">
         <div class="col-md-12 jumbotron text-center">
           <h1>World Happiness and Metal Bands Dashboard</h1>
-          <p>Use the interactive charts and map below to explore the dataset</p>
+          <p>
+            Use the interactive charts and maps below to explore the dataset
+          </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-2">
           <div class="well">
-            <h5>Test Subject ID No.:</h5>
+            <h5>Country:</h5>
             <select
               id="selDataset"
               onchange="optionChanged(this.value)"
             ></select>
           </div>
-          <div class="panel panel-primary">
+          <!-- <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Demographic Info</h3>
             </div>
             <div id="country-data" class="panel-body"></div>
-          </div>
+          </div> -->
         </div>
         <div class="col-md-5">
-          <div id="world-happiness"></div>
+          <!-- metal bubble chart: -->
+          <div id="container"></div>
         </div>
+
         <div class="col-md-5">
-          <div id="world-metal"></div>
+          <!-- Plotly happiness chart will be drawn inside this DIV -->
+          <div id="myDiv"></div>
         </div>
       </div>
       <div class="row">
@@ -57,14 +98,10 @@
           <div id="lil-guy"></div>
         </div>
       </div>
-</div>
-<div id="container"></div>
+    </div>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="app.js"></script>
-    <!-- <script src="extra_cred.js"></script> -->
- 
-
   </body>
 </html>
