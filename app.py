@@ -1,7 +1,6 @@
 # Import the dependencies.
-import numpy as np
-import json
-from flask_cors import CORS, cross_origin
+# import numpy as np
+# import json
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
@@ -12,7 +11,7 @@ from flask import Flask, jsonify, render_template
 # Database Setup
 #################################################
 # engine = create_engine("sqlite:///data/Happiness_PF.sqlite")
-engine = create_engine("sqlite:///data/Happiness_PF.sqlite")
+engine = create_engine("sqlite:///Happiness_PF.sqlite")
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
@@ -30,7 +29,6 @@ session = Session(engine)
 # Flask Setup
 #################################################
 app = Flask(__name__)
-cors = CORS(app)
 @app.route("/")
 def welcome():
     return render_template("index.html")
@@ -81,10 +79,7 @@ def welcome():
 
 @app.route("/api/v1.0/happiness/data")
 def happinessData():
-    joined_results = session.query(Happiness, Bands, Codes).join(Bands,\
-                     Happiness.Country == Bands.Country).join\
-                    (Codes, Happiness.Country == Codes.Country).all() #filter(Happiness.Country == Bands.Country).filter(Happiness.Country == Codes.Country).all()
-    print(joined_results)
+    joined_results = session.query(Happiness, Bands, Codes).join(Bands,Happiness.Country == Bands.Country).join(Codes, Happiness.Country == Codes.Country).all() 
     happiness_data_list = []
 
     for result in joined_results:
@@ -136,9 +131,9 @@ def happinessData():
 
         happiness_data_list.append(happiness_data)
 
-
+    session.close()
     return jsonify(happiness_data_list)
-
+    
 # @app.route("/api/v1.0/happiness/contribution")
 # def contributionData():
 #     contribution_results = session.query(Happiness.Country, Happiness.Contribution_GDP_per_capita, Happiness.Contribution_Social_support, Happiness.Contribution_Life_expectancy, Happiness.Contribution_Freedom, Happiness.Contribution_Generosity, Happiness.Contribution_Corruption, Happiness.Contribution_Dystopia).all()

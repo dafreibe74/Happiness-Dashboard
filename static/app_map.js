@@ -4,7 +4,7 @@
         'https://code.highcharts.com/mapdata/custom/world.topo.json'
     ).then(response => response.json());
 
-    Highcharts.getJSON('highchart_js.json', function (data) {
+    Highcharts.getJSON('./static/highchart_js.json', function (data) {
         console.log(data)
         Highcharts.mapChart('container', {
             chart: {
