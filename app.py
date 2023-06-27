@@ -134,7 +134,7 @@ def happinessData():
 
         happiness_data_list.append(happiness_data)
 
-
+    session.close()
     return jsonify(happiness_data_list)
 
 # @app.route("/api/v1.0/happiness/contribution")
@@ -182,4 +182,4 @@ def happinessData():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
