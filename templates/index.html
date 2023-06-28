@@ -9,20 +9,69 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
-    <style>
-      body {
-        background-image: url("https://img.freepik.com/free-vector/gradient-abstract-wireframe-background_23-2149020364.jpg");
-      }
-    </style>
-  <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-  <script src="https://code.highcharts.com/maps/modules/data.js"></script>
-  <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-  <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
-  <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
-  
+    <link rel="stylesheet" href="/static/style.css" />
+    <!-- highcharts info -->
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
+    <!-- plotly and d3 -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   </head>
 
-  <body>
+  <body class="page">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+          <h1>World Happiness and Metal Bands Dashboard</h1>
+          <p>
+            Is there a connection between number of metal bands and overall
+            happiness score per country?
+          </p>
+          <p>Use the interactive charts and maps to explore below!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <!-- metal bubble chart: -->
+          <div class="map" id="container"></div>
+        </div>
+        <br />
+        <br />
+        <div class="col-md-12 text-center">
+          <!-- Plotly happiness chart will be drawn inside this DIV -->
+          <div class="map" id="myDiv"></div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="row">
+        <div class="col-md-3 panel panel-primary">
+          <div class="dropdown">
+            <h5 class="panel-title text-center">
+              Select Country for Detailed Happiness Score:
+            </h5>
+            <select
+              id="selDataset"
+              onchange="optionChanged(this.value)"
+            ></select>
+            <div id="country-data" class="panel-body"></div>
+          </div>
+          <!-- <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Dropdown Country Menu</h3>
+            </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="lil-guy"></div>
+        </div>
+      </div>
+    </div>
+    <!-- <body>
     <div class="container">
       <div class="row">
         <div class="col-md-12 jumbotron text-center">
@@ -59,12 +108,11 @@
         </div>
       </div>
     </div>
-    <div id="lil-guy"></div>
+    <div id="lil-guy"></div> -->
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="./static/app_map.js"></script>
-    <script src="./static/Project3_with API.js"></script>
-    
+    <script src="/static/app_map.js"></script>
+    <script src="/static/Project3_with API.js"></script>
   </body>
 </html>

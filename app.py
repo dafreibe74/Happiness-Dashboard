@@ -7,6 +7,7 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify, render_template
 
+
 #################################################
 # Database Setup
 #################################################
@@ -29,6 +30,7 @@ session = Session(engine)
 # Flask Setup
 #################################################
 app = Flask(__name__)
+
 @app.route("/")
 def welcome():
     return render_template("index.html")
