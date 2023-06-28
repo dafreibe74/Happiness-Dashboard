@@ -28,7 +28,7 @@ function LilGuy(country2) {
       name: "Corruption",
       orientation: "h",
       marker: {
-        color: "red",
+        color: "#264653",
         width: 1,
       },
       type: "bar",
@@ -41,7 +41,7 @@ function LilGuy(country2) {
       orientation: "h",
       type: "bar",
       marker: {
-        color: "orange",
+        color: "#2A9D8F",
         width: 1,
       },
     };
@@ -53,7 +53,7 @@ function LilGuy(country2) {
       orientation: "h",
       type: "bar",
       marker: {
-        color: "blue",
+        color: "#E9C46A",
         width: 1,
       },
     };
@@ -65,7 +65,7 @@ function LilGuy(country2) {
       orientation: "h",
       type: "bar",
       marker: {
-        color: "green",
+        color: "#F4A261",
         width: 1,
       },
     };
@@ -77,7 +77,7 @@ function LilGuy(country2) {
       orientation: "h",
       type: "bar",
       marker: {
-        color: "pink",
+        color: "#E76F51",
         width: 1,
       },
     };
@@ -89,7 +89,7 @@ function LilGuy(country2) {
       orientation: "h",
       type: "bar",
       marker: {
-        color: "yellow",
+        color: "#f94144",
         width: 1,
       },
     };
@@ -99,8 +99,8 @@ function LilGuy(country2) {
       barmode: "stack",
       type: "multicategory",
       autosize: false,
-      width: 700,
-      height: 250,
+      width: 1100,
+      height: 300,
     };
 
     Plotly.newPlot("lil-guy", dataPlotting, layout);

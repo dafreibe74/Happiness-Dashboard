@@ -23,7 +23,7 @@
 
   <body class="page">
     <div class="container">
-      <div class="row">
+      <div class="row text-center">
         <div class="col-md-12 jumbotron text-center">
           <h1>World Happiness and Metal Bands Dashboard</h1>
           <p>
@@ -31,6 +31,29 @@
             happiness score per country?
           </p>
           <p>Use the interactive charts and maps to explore below!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 panel panel-primary text-center">
+          <div class="dropdown">
+            <h5 class="panel-title">
+              Select Country for Detailed Happiness Score:
+            </h5>
+            <select
+              id="selDataset"
+              onchange="optionChanged(this.value)"
+            ></select>
+            <div id="country-data" class="panel-body"></div>
+          </div>
+          <!-- <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Dropdown Country Menu</h3>
+            </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 lil-guy">
+          <div class="lil-guy" id="lil-guy"></div>
         </div>
       </div>
       <div class="row">
@@ -47,68 +70,7 @@
       </div>
       <br />
       <br />
-      <div class="row">
-        <div class="col-md-3 panel panel-primary">
-          <div class="dropdown">
-            <h5 class="panel-title text-center">
-              Select Country for Detailed Happiness Score:
-            </h5>
-            <select
-              id="selDataset"
-              onchange="optionChanged(this.value)"
-            ></select>
-            <div id="country-data" class="panel-body"></div>
-          </div>
-          <!-- <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Dropdown Country Menu</h3>
-            </div> -->
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div id="lil-guy"></div>
-        </div>
-      </div>
     </div>
-    <!-- <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 jumbotron text-center">
-          <h1>World Happiness and Metal Bands Dashboard</h1>
-          <p>Use the interactive charts and map below to explore the dataset</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="well">
-            <h5>Test Subject ID No.:</h5>
-            <select
-              id="selDataset"
-              onchange="optionChanged(this.value)"
-            ></select>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Demographic Info</h3>
-            </div>
-            <div id="country-data" class="panel-body"></div>
-          </div>
-        </div>
-        <div class="col-md-5">
-          <div id="world-happiness"></div>
-        </div>
-        <div class="col-md-5">
-          <div id="world-metal"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div id="container"></div>
-        </div>
-      </div>
-    </div>
-    <div id="lil-guy"></div> -->
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
